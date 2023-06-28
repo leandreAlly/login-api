@@ -31,11 +31,11 @@ const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
     let user = await User.findOne({ email });
-    if (!user) return res.status(400).json({ message: "user is not existed." });
+    if (!user) return res.status(404).json({ message: "user is not existed." });
 
     const passwordMatches = bcrypt.compare(password, user.password);
     if (!passwordMatches)
-      return res.status(400).json({ message: "wrong credintial." });
+      return res.status(401).json({ message: "wrong credintial." });
 
     const tokenInfo = {
       email,

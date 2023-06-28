@@ -1,5 +1,5 @@
 import dotenv from "dotenv/config";
-import { signUp } from "./documents/user.docs";
+import { signUp, loginUser } from "./documents/user.docs";
 
 export const swaggerDocument = {
   openapi: "3.0.1",
@@ -37,6 +37,9 @@ export const swaggerDocument = {
   paths: {
     "/api/v1/users/signup": {
       post: signUp,
+    },
+    "/api/v1/users/login": {
+      post: loginUser,
     },
   },
 };

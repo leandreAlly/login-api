@@ -39,8 +39,9 @@ const loginUser = async (req, res) => {
 
     const tokenInfo = {
       email,
+      id: user._id,
     };
-    const token = generateToken(tokenInfo);
+    const token = generateToken(tokenInfo); // generate token for user
     return res.status(200).json({ message: "login successfully", token });
   } catch (error) {
     console.error(error);

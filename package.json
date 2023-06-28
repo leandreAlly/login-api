@@ -12,9 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.22.5",
-    "@babel/node": "^7.22.5",
-    "@babel/preset-env": "^7.22.5",
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.21.5",
     "bcrypt": "^5.1.0",
     "colors": "^1.4.0",
     "dotenv": "^16.3.1",
